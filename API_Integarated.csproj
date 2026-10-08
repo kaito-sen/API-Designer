@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AvalonEdit" Version="6.3.1.120" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="UI\Resources\app_icon.png" />
+    <Resource Include="UI\Resources\app_icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Demo\**;Tests\**" />
+    <EmbeddedResource Remove="Demo\**;Tests\**" />
+    <None Remove="Demo\**;Tests\**" />
+    <Page Remove="Demo\**;Tests\**" />
+  </ItemGroup>
+
+</Project>

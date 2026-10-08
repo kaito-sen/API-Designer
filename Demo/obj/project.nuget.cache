@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "3G9slSCoCyw=",
+  "success": true,
+  "projectFilePath": "D:\\Project_RLink\\API_LIB\\API_Integarated\\Demo\\API_Integarated.Demo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\minhchau.nguyen.MYLAN\\.nuget\\packages\\avalonedit\\6.3.1.120\\avalonedit.6.3.1.120.nupkg.sha512",
+    "C:\\Users\\minhchau.nguyen.MYLAN\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.0\\communitytoolkit.mvvm.8.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}

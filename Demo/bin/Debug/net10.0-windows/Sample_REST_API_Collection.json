@@ -1,0 +1,207 @@
+{
+  "Id": "8d6d4704-6a37-4cb9-9f16-887b986b3d94",
+  "Name": "Sample REST API Collection",
+  "Description": "Pre-configured sample endpoints to test GET, POST, PUT, DELETE and Auth",
+  "BaseUrl": "",
+  "Endpoints": [
+    {
+      "Id": "2cc9e095-a73b-4b34-9e9a-c155d27fb9c3",
+      "Name": "1. Test GET Request",
+      "Description": "Fetches information with query parameters",
+      "Method": "POST",
+      "Url": "{{baseUrl}}/get",
+      "QueryParameters": [
+        {
+          "IsEnabled": true,
+          "Key": "deviceType",
+          "Value": "CameraScanner",
+          "Description": "Device Type query parameter"
+        },
+        {
+          "IsEnabled": true,
+          "Key": "status",
+          "Value": "active",
+          "Description": "Device status query"
+        }
+      ],
+      "Headers": [
+        {
+          "IsEnabled": true,
+          "Key": "Accept",
+          "Value": "application/json",
+          "Description": "Expected response format"
+        }
+      ],
+      "Auth": {
+        "Type": "BearerToken",
+        "BearerToken": "{{token}}",
+        "ApiKeyName": "X-API-KEY",
+        "ApiKeyValue": "",
+        "ApiKeyLocation": "Header",
+        "BasicUsername": "",
+        "BasicPassword": "",
+        "CustomHeaderName": "Authorization",
+        "CustomHeaderValue": ""
+      },
+      "Body": {
+        "BodyType": "None",
+        "RawContent": "",
+        "FormUrlEncodedItems": [],
+        "FormDataItems": []
+      },
+      "ExtractionRules": [],
+      "TimeoutSeconds": 30,
+      "IgnoreSslErrors": true
+    },
+    {
+      "Id": "4d744945-41bc-473c-bdbd-0f1ba32cfafd",
+      "Name": "2. Test POST with JSON Body",
+      "Description": "Creates a new resource with JSON payload",
+      "Method": "POST",
+      "Url": "{{baseUrl}}/post",
+      "QueryParameters": [],
+      "Headers": [
+        {
+          "IsEnabled": true,
+          "Key": "X-Client-Version",
+          "Value": "1.0.0",
+          "Description": "Custom client header"
+        }
+      ],
+      "Auth": {
+        "Type": "ApiKey",
+        "BearerToken": "",
+        "ApiKeyName": "X-Api-Key",
+        "ApiKeyValue": "{{apiKey}}",
+        "ApiKeyLocation": "Header",
+        "BasicUsername": "",
+        "BasicPassword": "",
+        "CustomHeaderName": "Authorization",
+        "CustomHeaderValue": ""
+      },
+      "Body": {
+        "BodyType": "Json",
+        "RawContent": "{\n  \"deviceName\": \"Sensor_A1\",\n  \"sensorType\": \"LaserDistance\",\n  \"samplingRate\": 500,\n  \"isActive\": true\n}",
+        "FormUrlEncodedItems": [],
+        "FormDataItems": []
+      },
+      "ExtractionRules": [],
+      "TimeoutSeconds": 30,
+      "IgnoreSslErrors": true
+    },
+    {
+      "Id": "b062c453-e61b-456e-8bf9-a5e0257ba5d9",
+      "Name": "3. Test PUT Update",
+      "Description": "Updates an existing resource",
+      "Method": "PUT",
+      "Url": "{{baseUrl}}/put",
+      "QueryParameters": [],
+      "Headers": [],
+      "Auth": {
+        "Type": "None",
+        "BearerToken": "",
+        "ApiKeyName": "X-API-KEY",
+        "ApiKeyValue": "",
+        "ApiKeyLocation": "Header",
+        "BasicUsername": "",
+        "BasicPassword": "",
+        "CustomHeaderName": "Authorization",
+        "CustomHeaderValue": ""
+      },
+      "Body": {
+        "BodyType": "Json",
+        "RawContent": "{\n  \"status\": \"CALIBRATING\",\n  \"updatedAt\": \"{{$isoTimestamp}}\"\n}",
+        "FormUrlEncodedItems": [],
+        "FormDataItems": []
+      },
+      "ExtractionRules": [],
+      "TimeoutSeconds": 30,
+      "IgnoreSslErrors": true
+    },
+    {
+      "Id": "434231d8-02c1-40bc-9753-009bdc5e0f7b",
+      "Name": "4. Test DELETE Resource",
+      "Description": "Deletes an item by ID",
+      "Method": "DELETE",
+      "Url": "{{baseUrl}}/delete",
+      "QueryParameters": [
+        {
+          "IsEnabled": true,
+          "Key": "id",
+          "Value": "101",
+          "Description": "ID to delete"
+        }
+      ],
+      "Headers": [],
+      "Auth": {
+        "Type": "None",
+        "BearerToken": "",
+        "ApiKeyName": "X-API-KEY",
+        "ApiKeyValue": "",
+        "ApiKeyLocation": "Header",
+        "BasicUsername": "",
+        "BasicPassword": "",
+        "CustomHeaderName": "Authorization",
+        "CustomHeaderValue": ""
+      },
+      "Body": {
+        "BodyType": "None",
+        "RawContent": "",
+        "FormUrlEncodedItems": [],
+        "FormDataItems": []
+      },
+      "ExtractionRules": [],
+      "TimeoutSeconds": 30,
+      "IgnoreSslErrors": true
+    },
+    {
+      "Id": "b84dae42-5afa-43fe-8671-fe7f7f6e6f4a",
+      "Name": "New Request 5",
+      "Description": null,
+      "Method": "GET",
+      "Url": "{{baseUrl}}/",
+      "QueryParameters": [],
+      "Headers": [],
+      "Auth": {
+        "Type": "None",
+        "BearerToken": "",
+        "ApiKeyName": "X-API-KEY",
+        "ApiKeyValue": "",
+        "ApiKeyLocation": "Header",
+        "BasicUsername": "",
+        "BasicPassword": "",
+        "CustomHeaderName": "Authorization",
+        "CustomHeaderValue": ""
+      },
+      "Body": {
+        "BodyType": "None",
+        "RawContent": "",
+        "FormUrlEncodedItems": [],
+        "FormDataItems": []
+      },
+      "ExtractionRules": [],
+      "TimeoutSeconds": 30,
+      "IgnoreSslErrors": true
+    }
+  ],
+  "EnvironmentVariables": [
+    {
+      "IsEnabled": true,
+      "Key": "baseUrl",
+      "Value": "https://httpbin.org",
+      "Description": "Base URL for the API"
+    },
+    {
+      "IsEnabled": true,
+      "Key": "token",
+      "Value": "my-secret-bearer-token-12345",
+      "Description": "Auth Bearer token"
+    },
+    {
+      "IsEnabled": true,
+      "Key": "apiKey",
+      "Value": "API_SEC_KEY_8899",
+      "Description": "Custom API Key"
+    }
+  ]
+}
