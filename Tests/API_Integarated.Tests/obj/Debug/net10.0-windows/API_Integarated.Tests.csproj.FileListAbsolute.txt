@@ -271,3 +271,4 @@ D:\Project_RLink\API_LIB\API_Integarated\Tests\API_Integarated.Tests\obj\Debug\n
 D:\Project_RLink\API_LIB\API_Integarated\Tests\API_Integarated.Tests\obj\Debug\net10.0-windows\API_Integarated.Tests.pdb
 D:\Project_RLink\API_LIB\API_Integarated\Tests\API_Integarated.Tests\obj\Debug\net10.0-windows\API_Integarated.Tests.genruntimeconfig.cache
 D:\Project_RLink\API_LIB\API_Integarated\Tests\API_Integarated.Tests\obj\Debug\net10.0-windows\ref\API_Integarated.Tests.dll
+D:\Project_RLink\API_LIB\API_Integarated\Tests\API_Integarated.Tests\obj\Debug\net10.0-windows\API_Integarated.Tests.sourcelink.json

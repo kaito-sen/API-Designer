@@ -18,3 +18,4 @@ D:\Project_RLink\API_LIB\API_Integarated\obj\Debug\net10.0-windows\API_Integarat
 D:\Project_RLink\API_LIB\API_Integarated\obj\Debug\net10.0-windows\refint\API_Integarated.dll
 D:\Project_RLink\API_LIB\API_Integarated\obj\Debug\net10.0-windows\API_Integarated.pdb
 D:\Project_RLink\API_LIB\API_Integarated\obj\Debug\net10.0-windows\ref\API_Integarated.dll
+D:\Project_RLink\API_LIB\API_Integarated\obj\Debug\net10.0-windows\API_Integarated.sourcelink.json
